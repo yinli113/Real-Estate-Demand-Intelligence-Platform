@@ -1,0 +1,25 @@
+{
+  "ip": "192.0.2.13",
+  "country_code": "US",
+  "country_name": "United States",
+  "region_name": "Region",
+  "city": "City",
+  "latitude": -17.0,
+  "longitude": 163.0,
+  "time_zone": {
+    "id": "UTC",
+    "code": "UTC"
+  },
+  "currency": {
+    "code": "USD"
+  },
+  "connection": {
+    "isp": "ISP-13",
+    "org": "Org-13"
+  },
+  "security": {
+    "is_proxy": false,
+    "proxy_type": null,
+    "threat_level": "low"
+  }
+}

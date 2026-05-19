@@ -1,0 +1,80 @@
+# Geo Risk Intelligence Pipeline — column contracts
+
+raw_event:
+  - event_id
+  - session_id
+  - event_ts
+  - event_type
+  - user_id
+  - ip
+  - user_agent
+  - amount
+
+bronze_events:
+  extends: raw_event
+  extra: [event_date, _ingested_at]
+
+bronze_ipstack_raw:
+  - ip
+  - response_json
+  - http_status
+  - api_called_at
+
+silver_ip_dim:
+  - ip
+  - country_code
+  - country_name
+  - region
+  - city
+  - latitude
+  - longitude
+  - timezone_id
+  - currency_code
+  - isp
+  - org
+  - is_proxy
+  - is_vpn
+  - threat_level
+  - enriched_at
+
+silver_events_enriched:
+  - event_id
+  - session_id
+  - event_ts
+  - event_type
+  - user_id
+  - ip
+  - user_agent
+  - amount
+  - event_date
+  - country_code
+  - country_name
+  - timezone_id
+  - isp
+  - is_vpn
+  - device
+  - spend
+
+gold_geo_traffic_daily:
+  - date
+  - country_code
+  - event_count
+  - unique_sessions
+  - revenue
+
+gold_fraud_signals:
+  - session_id
+  - ip
+  - country_code
+  - is_vpn
+  - vpn_risk_score
+  - event_count_1h
+  - flag_suspicious
+
+gold_customer_features:
+  - user_id
+  - primary_country
+  - timezone
+  - total_spend
+  - session_count
+  - last_seen_at

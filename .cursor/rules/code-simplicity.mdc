@@ -1,0 +1,10 @@
+---
+description: Keep notebooks simple and readable like databricks_vic_traffic
+globs: notebooks/**/*
+alwaysApply: false
+---
+
+# Code simplicity
+
+- One Config in 1_config; one helper class per loader.
+- Phase 1 batch only; target under 150 lines transform logic per loader.

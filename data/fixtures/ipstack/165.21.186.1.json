@@ -1,0 +1,25 @@
+{
+  "ip": "165.21.186.1",
+  "country_code": "SG",
+  "country_name": "Singapore",
+  "region_name": "Singapore",
+  "city": "Singapore",
+  "latitude": 1.35,
+  "longitude": 103.82,
+  "time_zone": {
+    "id": "Asia/Singapore",
+    "code": "UTC"
+  },
+  "currency": {
+    "code": "SGD"
+  },
+  "connection": {
+    "isp": "Singtel",
+    "org": "Singtel"
+  },
+  "security": {
+    "is_proxy": false,
+    "proxy_type": null,
+    "threat_level": "low"
+  }
+}

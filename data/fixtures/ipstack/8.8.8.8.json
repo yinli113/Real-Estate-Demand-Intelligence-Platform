@@ -1,0 +1,25 @@
+{
+  "ip": "8.8.8.8",
+  "country_code": "US",
+  "country_name": "United States",
+  "region_name": "California",
+  "city": "Mountain View",
+  "latitude": 37.39,
+  "longitude": -122.08,
+  "time_zone": {
+    "id": "America/Los_Angeles",
+    "code": "UTC"
+  },
+  "currency": {
+    "code": "USD"
+  },
+  "connection": {
+    "isp": "Google",
+    "org": "Google LLC"
+  },
+  "security": {
+    "is_proxy": false,
+    "proxy_type": null,
+    "threat_level": "low"
+  }
+}

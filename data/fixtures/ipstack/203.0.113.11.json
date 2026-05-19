@@ -1,0 +1,25 @@
+{
+  "ip": "203.0.113.11",
+  "country_code": "AU",
+  "country_name": "Australia",
+  "region_name": "NSW",
+  "city": "Sydney",
+  "latitude": -33.87,
+  "longitude": 151.21,
+  "time_zone": {
+    "id": "Australia/Sydney",
+    "code": "UTC"
+  },
+  "currency": {
+    "code": "AUD"
+  },
+  "connection": {
+    "isp": "Optus",
+    "org": "Optus"
+  },
+  "security": {
+    "is_proxy": false,
+    "proxy_type": null,
+    "threat_level": "low"
+  }
+}

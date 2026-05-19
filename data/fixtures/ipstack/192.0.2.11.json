@@ -1,0 +1,25 @@
+{
+  "ip": "192.0.2.11",
+  "country_code": "GB",
+  "country_name": "United Kingdom",
+  "region_name": "Region",
+  "city": "City",
+  "latitude": -19.0,
+  "longitude": 161.0,
+  "time_zone": {
+    "id": "UTC",
+    "code": "UTC"
+  },
+  "currency": {
+    "code": "USD"
+  },
+  "connection": {
+    "isp": "ISP-11",
+    "org": "Org-11"
+  },
+  "security": {
+    "is_proxy": false,
+    "proxy_type": null,
+    "threat_level": "low"
+  }
+}

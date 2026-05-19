@@ -1,0 +1,25 @@
+{
+  "ip": "185.220.101.50",
+  "country_code": "DE",
+  "country_name": "Germany",
+  "region_name": "Berlin",
+  "city": "Berlin",
+  "latitude": 52.52,
+  "longitude": 13.4,
+  "time_zone": {
+    "id": "Europe/Berlin",
+    "code": "UTC"
+  },
+  "currency": {
+    "code": "EUR"
+  },
+  "connection": {
+    "isp": "VPN Provider",
+    "org": "Privacy GmbH"
+  },
+  "security": {
+    "is_proxy": true,
+    "proxy_type": "vpn",
+    "threat_level": "high"
+  }
+}

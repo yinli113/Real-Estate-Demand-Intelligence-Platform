@@ -1,0 +1,12 @@
+---
+description: PySpark notebook conventions for Fabric and Databricks
+globs: notebooks/**/*,databricks/**/*
+alwaysApply: false
+---
+
+# Notebooks
+
+- Order: 1_config → 2_setup → 3_cleanup → 4_bronze → 5_silver → 6_gold.
+- Always %run ./1_config first; use conf.table_fqn("table_name").
+- Parameters: ENV, LAKEHOUSE, MOCK_IPSTACK, LOOKBACK_DAYS, SOURCE_FILE.
+- Do not hardcode API keys or lakehouse GUIDs.

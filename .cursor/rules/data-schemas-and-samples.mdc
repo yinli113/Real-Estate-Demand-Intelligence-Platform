@@ -1,0 +1,12 @@
+---
+description: Event schema, sample data, file size constraints
+globs: config/**/*,data/**/*
+alwaysApply: false
+---
+
+# Data contracts
+
+Raw CSV columns only: event_id,session_id,event_ts,event_type,user_id,ip,user_agent,amount
+
+- Single file under 4 MB; 30-day filter before upload.
+- Source of truth: config/schemas.yaml

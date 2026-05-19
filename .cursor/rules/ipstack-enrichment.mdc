@@ -1,0 +1,12 @@
+---
+description: IPstack enrichment, Bronze raw JSON, IP cache
+globs: notebooks/**/5_silver*.ipynb,config/schemas.yaml
+alwaysApply: false
+---
+
+# IPstack
+
+- GET http://api.ipstack.com/{ip}?access_key=***&security=1
+- Enrich distinct IPs only; cache in silver_ip_dim.
+- Mock: data/fixtures/ipstack/{ip}.json when MOCK_IPSTACK=true.
+- Geo reflects current lookup (document for 30-day historical events).

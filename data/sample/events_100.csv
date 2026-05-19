@@ -1,0 +1,101 @@
+event_id,session_id,event_ts,event_type,user_id,ip,user_agent,amount
+85e66731-2c0e-4275-be58-cef92b62da21,sess-velocity-001,2026-04-20T10:00:00,login,user-whale-001,185.220.101.50,Mozilla/5.0 (iPhone; CPU iPhone OS 17_0 like Mac OS X),
+d6659141-cbe9-4827-824a-c9e0294b72d8,sess-velocity-001,2026-04-20T10:01:00,login,user-0001,185.220.101.50,Mozilla/5.0 (Windows NT 10.0; Win64; x64) Chrome/120.0.0.0,
+8613f6aa-4ef3-4400-bf5b-9a78f336cd5a,sess-velocity-001,2026-04-20T10:02:00,purchase,user-0002,185.220.101.50,Mozilla/5.0 (Windows NT 10.0; Win64; x64) Chrome/120.0.0.0,33.16
+72ebe8ab-f770-4bfd-a0c3-73a0f42ff17a,sess-velocity-001,2026-04-20T10:03:00,page_view,user-0003,185.220.101.50,Mozilla/5.0 (iPhone; CPU iPhone OS 17_0 like Mac OS X),
+109fcb9b-0c83-4723-b2f4-979e60c2a755,sess-velocity-001,2026-04-20T10:04:00,login,user-0004,185.220.101.50,Mozilla/5.0 (Windows NT 10.0; Win64; x64) Chrome/120.0.0.0,
+10205956-62f7-4120-a7fa-2e4e882fe364,sess-velocity-001,2026-04-20T10:05:00,login,user-0005,185.220.101.50,Mozilla/5.0 (Windows NT 10.0; Win64; x64) Chrome/120.0.0.0,
+423e3b79-685e-4df6-b83c-20ced7775880,sess-velocity-001,2026-04-20T10:06:00,session_start,user-0006,185.220.101.50,Mozilla/5.0 (iPhone; CPU iPhone OS 17_0 like Mac OS X),
+7f4c2705-5070-48f5-87bc-228ec4a40f5c,sess-velocity-001,2026-04-20T10:07:00,login,user-0007,185.220.101.50,Mozilla/5.0 (Windows NT 10.0; Win64; x64) Chrome/120.0.0.0,
+7a1d8c64-acad-4221-9ddd-eb71d87f8aa3,sess-velocity-001,2026-04-20T10:08:00,login,user-0008,185.220.101.50,Mozilla/5.0 (Windows NT 10.0; Win64; x64) Chrome/120.0.0.0,
+d92efa8d-acac-493d-94db-36c24f6042cb,sess-velocity-001,2026-04-20T10:09:00,login,user-0009,185.220.101.50,Mozilla/5.0 (iPhone; CPU iPhone OS 17_0 like Mac OS X),
+ad905c58-3d1f-4261-9159-0a591f98b68d,sess-velocity-001,2026-04-20T10:10:00,page_view,user-0010,185.220.101.50,Mozilla/5.0 (Windows NT 10.0; Win64; x64) Chrome/120.0.0.0,
+3285d288-5f85-4304-abd2-a3f590895a81,sess-velocity-001,2026-04-20T10:11:00,page_view,user-0011,185.220.101.50,Mozilla/5.0 (Windows NT 10.0; Win64; x64) Chrome/120.0.0.0,
+fee12391-5ba0-4df1-aab9-bea498fa8a6c,sess-velocity-001,2026-04-20T10:12:00,login,user-0012,185.220.101.50,Mozilla/5.0 (iPhone; CPU iPhone OS 17_0 like Mac OS X),
+cbfed93b-ce73-43a4-a09d-faab82316a42,sess-velocity-001,2026-04-20T10:13:00,page_view,user-0013,185.220.101.50,Mozilla/5.0 (Windows NT 10.0; Win64; x64) Chrome/120.0.0.0,
+be02b8fb-b195-474c-bd0c-88697372a52d,sess-velocity-001,2026-04-20T10:14:00,session_start,user-0014,185.220.101.50,Mozilla/5.0 (Windows NT 10.0; Win64; x64) Chrome/120.0.0.0,
+05623ebf-cf70-460b-b2e6-db85845d8c0a,sess-velocity-001,2026-04-20T10:15:00,page_view,user-0015,185.220.101.50,Mozilla/5.0 (iPhone; CPU iPhone OS 17_0 like Mac OS X),
+6bf900fc-0ebc-424f-a8cd-df4a32a4f6eb,sess-velocity-001,2026-04-20T10:16:00,session_start,user-0016,185.220.101.50,Mozilla/5.0 (Windows NT 10.0; Win64; x64) Chrome/120.0.0.0,
+8af42082-975f-4e15-967b-27063bfe9cd0,sess-velocity-001,2026-04-20T10:17:00,purchase,user-0017,185.220.101.50,Mozilla/5.0 (Windows NT 10.0; Win64; x64) Chrome/120.0.0.0,98.08
+78e2a5c7-c30d-4d25-ad28-b68c58778c49,sess-velocity-001,2026-04-20T10:18:00,login,user-0018,185.220.101.50,Mozilla/5.0 (iPhone; CPU iPhone OS 17_0 like Mac OS X),
+29a6128b-be9a-4acb-b86f-2af5a0e7e423,sess-velocity-001,2026-04-20T10:19:00,page_view,user-0019,185.220.101.50,Mozilla/5.0 (Windows NT 10.0; Win64; x64) Chrome/120.0.0.0,
+cf23d69f-6669-4d13-a96a-f7d8d7a7762c,sess-velocity-001,2026-04-20T10:20:00,session_start,user-0020,185.220.101.50,Mozilla/5.0 (Windows NT 10.0; Win64; x64) Chrome/120.0.0.0,
+5b6d3be9-b9e1-4643-a9e1-8c1ee36e5a1d,sess-velocity-001,2026-04-20T10:21:00,purchase,user-0021,185.220.101.50,Mozilla/5.0 (iPhone; CPU iPhone OS 17_0 like Mac OS X),36.96
+f5eeb7ed-170e-4701-bb50-d67bff153556,sess-velocity-001,2026-04-20T10:22:00,page_view,user-0022,185.220.101.50,Mozilla/5.0 (Windows NT 10.0; Win64; x64) Chrome/120.0.0.0,
+03af958f-2eba-4d88-bc70-0ffc5de3b809,sess-velocity-001,2026-04-20T10:23:00,purchase,user-0023,185.220.101.50,Mozilla/5.0 (Windows NT 10.0; Win64; x64) Chrome/120.0.0.0,16.75
+8afe2aa9-7345-4503-9ab9-34285ec0467b,sess-velocity-001,2026-04-20T10:24:00,session_start,user-0024,185.220.101.50,Mozilla/5.0 (iPhone; CPU iPhone OS 17_0 like Mac OS X),
+08d213d5-989c-4838-a869-a15c8bc2234a,sess-0025,2026-04-20T12:25:00,login,user-0025,192.0.2.29,Mozilla/5.0 (Windows NT 10.0; Win64; x64) Chrome/120.0.0.0,
+aad7f400-c9f8-42b8-a198-cfd21323b2fd,sess-0026,2026-04-21T13:26:00,purchase,user-0026,203.0.113.10,Mozilla/5.0 (Windows NT 10.0; Win64; x64) Chrome/120.0.0.0,102.46
+c97b0fdf-5c9d-4927-994d-218720e290ed,sess-0027,2026-04-22T14:27:00,purchase,user-0027,203.0.113.11,Mozilla/5.0 (iPhone; CPU iPhone OS 17_0 like Mac OS X),97.82
+facab5bf-c350-4709-bed1-4403fdcbb994,sess-0028,2026-04-23T15:28:00,session_start,user-0028,8.8.8.8,Mozilla/5.0 (Windows NT 10.0; Win64; x64) Chrome/120.0.0.0,
+6e733cfe-8261-4da0-9a8d-77651cf95e9c,sess-0029,2026-04-24T16:29:00,login,user-0029,1.1.1.1,Mozilla/5.0 (Windows NT 10.0; Win64; x64) Chrome/120.0.0.0,
+d03c1fe3-5d78-4450-a612-b9d3ba65d6cb,sess-0030,2026-04-25T17:30:00,session_start,user-0030,165.21.186.1,Mozilla/5.0 (iPhone; CPU iPhone OS 17_0 like Mac OS X),
+2b336fe7-6311-414b-91d0-02440d839328,sess-0031,2026-04-26T18:31:00,login,user-whale-001,185.220.101.50,Mozilla/5.0 (Windows NT 10.0; Win64; x64) Chrome/120.0.0.0,
+f02678bc-cc7b-4141-ae15-b46bcdd709a9,sess-0032,2026-04-27T19:32:00,purchase,user-0032,192.0.2.10,Mozilla/5.0 (Windows NT 10.0; Win64; x64) Chrome/120.0.0.0,100.38
+353bb935-d2ee-4d71-b3a1-d7328ced55f6,sess-0033,2026-04-28T20:33:00,purchase,user-0033,192.0.2.11,Mozilla/5.0 (iPhone; CPU iPhone OS 17_0 like Mac OS X),71.4
+5c83370a-538c-489e-8b18-65e5b459afcb,sess-0034,2026-04-29T21:34:00,login,user-0034,192.0.2.12,Mozilla/5.0 (Windows NT 10.0; Win64; x64) Chrome/120.0.0.0,
+ae6ae1ec-9762-4cbf-a51e-e8b25cf3511b,sess-0035,2026-04-30T22:35:00,login,user-0035,192.0.2.13,Mozilla/5.0 (Windows NT 10.0; Win64; x64) Chrome/120.0.0.0,
+4722e055-3e65-4b70-a4c1-fa77a3cf3e20,sess-0036,2026-05-01T23:36:00,page_view,user-0036,192.0.2.14,Mozilla/5.0 (iPhone; CPU iPhone OS 17_0 like Mac OS X),
+bb5fd5cf-46c7-4f47-8d75-86afa88ed5f7,sess-0037,2026-05-03T00:37:00,purchase,user-0037,192.0.2.15,Mozilla/5.0 (Windows NT 10.0; Win64; x64) Chrome/120.0.0.0,118.3
+8d4c7310-6251-482f-9b61-4070540a3f38,sess-0038,2026-05-04T01:38:00,page_view,user-0038,192.0.2.16,Mozilla/5.0 (Windows NT 10.0; Win64; x64) Chrome/120.0.0.0,
+5200c239-0780-437a-900a-ca5cfb3fe0ec,sess-0039,2026-05-05T02:39:00,login,user-0039,192.0.2.17,Mozilla/5.0 (iPhone; CPU iPhone OS 17_0 like Mac OS X),
+8618d2fa-6cbf-417f-a41d-39b2e386d7ff,sess-0000,2026-05-06T03:40:00,session_start,user-0040,192.0.2.18,Mozilla/5.0 (Windows NT 10.0; Win64; x64) Chrome/120.0.0.0,
+4260cbaa-64a7-47e8-a91d-381e2c93288a,sess-0001,2026-05-07T04:41:00,purchase,user-0041,192.0.2.19,Mozilla/5.0 (Windows NT 10.0; Win64; x64) Chrome/120.0.0.0,57.14
+f0d50c6e-ca66-475d-8a51-0623ef04e2f0,sess-0002,2026-05-08T05:42:00,purchase,user-0042,192.0.2.20,Mozilla/5.0 (iPhone; CPU iPhone OS 17_0 like Mac OS X),23.71
+35f2a9d2-ddb3-4d64-803d-57472bb58e5a,sess-0003,2026-05-09T06:43:00,purchase,user-0043,192.0.2.21,Mozilla/5.0 (Windows NT 10.0; Win64; x64) Chrome/120.0.0.0,29.09
+4e4c7633-9d5c-4437-8212-22e09f7481ae,sess-0004,2026-05-10T07:44:00,purchase,user-0044,192.0.2.22,Mozilla/5.0 (Windows NT 10.0; Win64; x64) Chrome/120.0.0.0,85.71
+6d025c21-a054-434a-92d6-53a9e49b2692,sess-0005,2026-05-11T08:45:00,login,user-0045,192.0.2.23,Mozilla/5.0 (iPhone; CPU iPhone OS 17_0 like Mac OS X),
+a86d9f07-19d2-481b-931a-11fb709b9f36,sess-0006,2026-05-11T10:46:00,page_view,user-0046,192.0.2.24,Mozilla/5.0 (Windows NT 10.0; Win64; x64) Chrome/120.0.0.0,
+c6f27d34-870b-4eec-877e-3c448ed2a878,sess-0007,2026-05-12T11:47:00,page_view,user-0047,192.0.2.25,Mozilla/5.0 (Windows NT 10.0; Win64; x64) Chrome/120.0.0.0,
+2e8638a4-d45c-4a29-918c-d76e6dd2557b,sess-0008,2026-05-13T12:48:00,page_view,user-0048,192.0.2.26,Mozilla/5.0 (iPhone; CPU iPhone OS 17_0 like Mac OS X),
+927845af-6866-408b-857a-93f5a58f6614,sess-0009,2026-05-14T13:49:00,session_start,user-0049,192.0.2.27,Mozilla/5.0 (Windows NT 10.0; Win64; x64) Chrome/120.0.0.0,
+714ea333-aa8f-4173-8970-cfb7ba39f15f,sess-0010,2026-04-20T14:50:00,session_start,user-0000,192.0.2.28,Mozilla/5.0 (Windows NT 10.0; Win64; x64) Chrome/120.0.0.0,
+5bff05c6-18fe-400a-8828-faeb0fb93642,sess-0011,2026-04-21T15:51:00,purchase,user-0001,192.0.2.29,Mozilla/5.0 (iPhone; CPU iPhone OS 17_0 like Mac OS X),118.8
+5663ea60-9cae-4bd2-abb6-039db14aa6ef,sess-0012,2026-04-22T16:52:00,page_view,user-0002,203.0.113.10,Mozilla/5.0 (Windows NT 10.0; Win64; x64) Chrome/120.0.0.0,
+59b0d058-dcc9-4f30-bbb4-390ec30fc927,sess-0013,2026-04-23T17:53:00,purchase,user-0003,203.0.113.11,Mozilla/5.0 (Windows NT 10.0; Win64; x64) Chrome/120.0.0.0,101.93
+e00546f6-27b6-4010-92b6-a9d218c616e8,sess-0014,2026-04-24T18:54:00,login,user-0004,8.8.8.8,Mozilla/5.0 (iPhone; CPU iPhone OS 17_0 like Mac OS X),
+98abba2e-c625-4e60-81a0-50b23fc51e2b,sess-0015,2026-04-25T19:55:00,page_view,user-0005,1.1.1.1,Mozilla/5.0 (Windows NT 10.0; Win64; x64) Chrome/120.0.0.0,
+99e272fb-809e-4aa0-86e6-63cac83bc60e,sess-0016,2026-04-26T20:56:00,login,user-0006,165.21.186.1,Mozilla/5.0 (Windows NT 10.0; Win64; x64) Chrome/120.0.0.0,
+d769fe9c-0440-414f-86d6-516c52b40a7f,sess-0017,2026-04-27T21:57:00,purchase,user-0007,185.220.101.50,Mozilla/5.0 (iPhone; CPU iPhone OS 17_0 like Mac OS X),51.13
+fa3da05c-f5d0-4277-b0ab-5cda5430802e,sess-0018,2026-04-28T22:58:00,login,user-0008,192.0.2.10,Mozilla/5.0 (Windows NT 10.0; Win64; x64) Chrome/120.0.0.0,
+8bd807e2-6f3b-4348-b9e6-5ef9bbe4b483,sess-0019,2026-04-29T23:00:00,page_view,user-0009,192.0.2.11,Mozilla/5.0 (Windows NT 10.0; Win64; x64) Chrome/120.0.0.0,
+43a77c19-ef61-4d5d-a9bd-8d024504e4b5,sess-0020,2026-05-01T00:01:00,purchase,user-0010,192.0.2.12,Mozilla/5.0 (iPhone; CPU iPhone OS 17_0 like Mac OS X),29.45
+b9116d0f-1bc1-4d0e-a243-ba2e69fcd596,sess-0021,2026-05-02T01:02:00,session_start,user-0011,192.0.2.13,Mozilla/5.0 (Windows NT 10.0; Win64; x64) Chrome/120.0.0.0,
+16752888-ea3b-4462-9af2-275c11b174d4,sess-0022,2026-05-03T02:03:00,session_start,user-whale-001,192.0.2.14,Mozilla/5.0 (Windows NT 10.0; Win64; x64) Chrome/120.0.0.0,
+9bb31216-0675-4c3d-abc2-2f576114d886,sess-0023,2026-05-04T03:04:00,session_start,user-0013,192.0.2.15,Mozilla/5.0 (iPhone; CPU iPhone OS 17_0 like Mac OS X),
+61b38a2a-42dd-49fb-8c12-423ea67c4044,sess-0024,2026-05-05T04:05:00,page_view,user-0014,192.0.2.16,Mozilla/5.0 (Windows NT 10.0; Win64; x64) Chrome/120.0.0.0,
+321686e3-99dd-4d84-86df-8e822f725a59,sess-0025,2026-05-06T05:06:00,purchase,user-0015,192.0.2.17,Mozilla/5.0 (Windows NT 10.0; Win64; x64) Chrome/120.0.0.0,21.06
+82a16947-a558-4eed-b2cf-86791f8d3418,sess-0026,2026-05-07T06:07:00,purchase,user-0016,192.0.2.18,Mozilla/5.0 (iPhone; CPU iPhone OS 17_0 like Mac OS X),90.91
+be41457d-70dd-4d0b-956d-57ea36f07a84,sess-0027,2026-05-08T07:08:00,session_start,user-0017,192.0.2.19,Mozilla/5.0 (Windows NT 10.0; Win64; x64) Chrome/120.0.0.0,
+4ac14b3e-5af6-4938-b1ed-427443d9a7df,sess-0028,2026-05-09T08:09:00,session_start,user-0018,192.0.2.20,Mozilla/5.0 (Windows NT 10.0; Win64; x64) Chrome/120.0.0.0,
+b81578eb-45b3-4373-9a97-27733e51034f,sess-0029,2026-05-09T10:10:00,purchase,user-0019,192.0.2.21,Mozilla/5.0 (iPhone; CPU iPhone OS 17_0 like Mac OS X),30.22
+ddfc3113-80d2-44ef-bbbf-0d02d4e6d0e2,sess-0030,2026-05-10T11:11:00,page_view,user-0020,192.0.2.22,Mozilla/5.0 (Windows NT 10.0; Win64; x64) Chrome/120.0.0.0,
+738f6503-8591-45ed-abef-829a878dc601,sess-0031,2026-05-11T12:12:00,session_start,user-0021,192.0.2.23,Mozilla/5.0 (Windows NT 10.0; Win64; x64) Chrome/120.0.0.0,
+975db444-b5a3-489f-9cfb-81e6b2245f51,sess-0032,2026-05-12T13:13:00,login,user-0022,192.0.2.24,Mozilla/5.0 (iPhone; CPU iPhone OS 17_0 like Mac OS X),
+38d67ac1-21ce-4279-bc4b-02ee4e3953b9,sess-0033,2026-05-13T14:14:00,login,user-0023,192.0.2.25,Mozilla/5.0 (Windows NT 10.0; Win64; x64) Chrome/120.0.0.0,
+c7268de7-77a9-4455-b088-55d476aed504,sess-0034,2026-05-14T15:15:00,login,user-0024,192.0.2.26,Mozilla/5.0 (Windows NT 10.0; Win64; x64) Chrome/120.0.0.0,
+085f1946-072b-4b64-85a5-42f09baa3d68,sess-0035,2026-04-20T16:16:00,page_view,user-0025,192.0.2.27,Mozilla/5.0 (iPhone; CPU iPhone OS 17_0 like Mac OS X),
+3ff751da-2796-4bea-8e80-76f8848d6ba3,sess-0036,2026-04-21T17:17:00,page_view,user-0026,192.0.2.28,Mozilla/5.0 (Windows NT 10.0; Win64; x64) Chrome/120.0.0.0,
+566db4ed-a1cd-405d-9266-7cc693fb6b34,sess-0037,2026-04-22T18:18:00,session_start,user-0027,192.0.2.29,Mozilla/5.0 (Windows NT 10.0; Win64; x64) Chrome/120.0.0.0,
+b042c5da-6354-417d-895e-ab9c804dedd3,sess-0038,2026-04-23T19:19:00,login,user-0028,203.0.113.10,Mozilla/5.0 (iPhone; CPU iPhone OS 17_0 like Mac OS X),
+307d5c2c-5449-4ee6-8ed4-f1f237839c8e,sess-0039,2026-04-24T20:20:00,session_start,user-0029,203.0.113.11,Mozilla/5.0 (Windows NT 10.0; Win64; x64) Chrome/120.0.0.0,
+84e3bccc-6818-4698-9ed7-b8ae837975e0,sess-0000,2026-04-25T21:21:00,session_start,user-0030,8.8.8.8,Mozilla/5.0 (Windows NT 10.0; Win64; x64) Chrome/120.0.0.0,
+4daf7d50-6d8f-4c2e-82cc-a33ae7025ae5,sess-0001,2026-04-26T22:22:00,session_start,user-0031,1.1.1.1,Mozilla/5.0 (iPhone; CPU iPhone OS 17_0 like Mac OS X),
+e6c7e1a9-3c59-446c-bbba-5741e7848f14,sess-0002,2026-04-27T23:23:00,purchase,user-0032,165.21.186.1,Mozilla/5.0 (Windows NT 10.0; Win64; x64) Chrome/120.0.0.0,116.67
+86c549e0-b7fd-4a4c-8e75-825290ebd627,sess-0003,2026-04-29T00:24:00,login,user-0033,185.220.101.50,Mozilla/5.0 (Windows NT 10.0; Win64; x64) Chrome/120.0.0.0,
+08455bd9-89e7-4845-a89f-ba025cbc3f63,sess-0004,2026-04-30T01:25:00,login,user-0034,192.0.2.10,Mozilla/5.0 (iPhone; CPU iPhone OS 17_0 like Mac OS X),
+54bb06f5-0e63-4eee-99e8-e92812097771,sess-0005,2026-05-01T02:26:00,purchase,user-0035,192.0.2.11,Mozilla/5.0 (Windows NT 10.0; Win64; x64) Chrome/120.0.0.0,93.39
+027cd4dc-afee-4892-94dc-32edea745e37,sess-0006,2026-05-02T03:27:00,purchase,user-0036,192.0.2.12,Mozilla/5.0 (Windows NT 10.0; Win64; x64) Chrome/120.0.0.0,17.83
+aaef7eb7-7518-47dc-90f2-9e2b545b6228,sess-0007,2026-05-03T04:28:00,session_start,user-0037,192.0.2.13,Mozilla/5.0 (iPhone; CPU iPhone OS 17_0 like Mac OS X),
+2633b383-d815-4496-8734-829e07e8be49,sess-0008,2026-05-04T05:29:00,page_view,user-0038,192.0.2.14,Mozilla/5.0 (Windows NT 10.0; Win64; x64) Chrome/120.0.0.0,
+3579622d-0911-4341-8fcb-e7547f4b75ba,sess-0009,2026-05-05T06:30:00,session_start,user-0039,192.0.2.15,Mozilla/5.0 (Windows NT 10.0; Win64; x64) Chrome/120.0.0.0,
+5488d599-207c-46db-8e06-f433a0c259b1,sess-0010,2026-05-06T07:31:00,login,user-0040,192.0.2.16,Mozilla/5.0 (iPhone; CPU iPhone OS 17_0 like Mac OS X),
+235389ab-fe32-4300-a9cc-c4112cf08b0f,sess-0011,2026-05-07T08:32:00,purchase,user-0041,192.0.2.17,Mozilla/5.0 (Windows NT 10.0; Win64; x64) Chrome/120.0.0.0,116.77
+0678b487-6dda-4725-99ff-25b6bacdc465,sess-0012,2026-05-07T10:33:00,page_view,user-0042,192.0.2.18,Mozilla/5.0 (Windows NT 10.0; Win64; x64) Chrome/120.0.0.0,
+248cbda5-9e7c-41f3-94dc-33443fed4fad,sess-0013,2026-05-08T11:34:00,login,user-whale-001,192.0.2.19,Mozilla/5.0 (iPhone; CPU iPhone OS 17_0 like Mac OS X),
+03b53982-54d7-46b2-9fc3-7302c1e5f2b1,sess-0014,2026-05-09T12:35:00,purchase,user-0044,192.0.2.20,Mozilla/5.0 (Windows NT 10.0; Win64; x64) Chrome/120.0.0.0,101.79
+0b006a63-aeca-4698-a7df-4ba8109e118b,sess-0015,2026-05-10T13:36:00,page_view,user-0045,192.0.2.21,Mozilla/5.0 (Windows NT 10.0; Win64; x64) Chrome/120.0.0.0,
+eeb24f41-6da9-4381-a889-6938c48ac711,sess-0016,2026-05-11T14:37:00,page_view,user-0046,192.0.2.22,Mozilla/5.0 (iPhone; CPU iPhone OS 17_0 like Mac OS X),
+8ce86cab-145f-417c-b794-d3197564c02b,sess-0017,2026-05-12T15:38:00,purchase,user-0047,192.0.2.23,Mozilla/5.0 (Windows NT 10.0; Win64; x64) Chrome/120.0.0.0,92.69
+ed91c3c0-6aa3-41c2-a53f-86a2d56ed742,sess-0018,2026-05-13T16:39:00,login,user-0048,192.0.2.24,Mozilla/5.0 (Windows NT 10.0; Win64; x64) Chrome/120.0.0.0,
+ae0abe36-6a43-407f-8ffa-0d94518a5292,sess-0019,2026-05-14T17:40:00,purchase,user-0049,192.0.2.25,Mozilla/5.0 (iPhone; CPU iPhone OS 17_0 like Mac OS X),61.19

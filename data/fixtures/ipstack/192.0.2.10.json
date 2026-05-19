@@ -1,0 +1,25 @@
+{
+  "ip": "192.0.2.10",
+  "country_code": "SG",
+  "country_name": "Singapore",
+  "region_name": "Region",
+  "city": "City",
+  "latitude": -20.0,
+  "longitude": 160.0,
+  "time_zone": {
+    "id": "UTC",
+    "code": "UTC"
+  },
+  "currency": {
+    "code": "USD"
+  },
+  "connection": {
+    "isp": "ISP-10",
+    "org": "Org-10"
+  },
+  "security": {
+    "is_proxy": false,
+    "proxy_type": null,
+    "threat_level": "low"
+  }
+}

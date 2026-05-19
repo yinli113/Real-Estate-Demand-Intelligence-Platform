@@ -1,0 +1,24 @@
+---
+description: Geo Risk Intelligence Pipeline — architecture, scope, and phase boundaries
+alwaysApply: true
+---
+
+# Geo Risk Intelligence Pipeline
+
+## Scope
+- Phase 1: Fabric-first Bronze → Silver → Gold; batch only (no streaming).
+- Historical window: last 30 days of event_ts only.
+- Environments: dev | test | prod via config/environments.yaml + Fabric Variable Library.
+- Dual Gold: gold_fraud_signals, gold_customer_features, gold_geo_traffic_daily.
+
+## Code simplicity
+- Mirror databricks_vic_traffic numbered notebooks; Config + one loader class per layer.
+- No frameworks; if logic is used once, keep it in that notebook.
+
+## Medallion
+- Bronze: raw events + raw IPstack JSON (never drop response_json).
+- Silver: silver_ip_dim cache + silver_events_enriched.
+- Gold: use event_ts for time logic, not api_called_at.
+
+## Secrets
+- IPSTACK_ACCESS_KEY via Variable Library or .env — never commit keys.

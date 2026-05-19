@@ -1,0 +1,25 @@
+{
+  "ip": "192.0.2.20",
+  "country_code": "AU",
+  "country_name": "Australia",
+  "region_name": "Region",
+  "city": "City",
+  "latitude": -10.0,
+  "longitude": 170.0,
+  "time_zone": {
+    "id": "UTC",
+    "code": "UTC"
+  },
+  "currency": {
+    "code": "USD"
+  },
+  "connection": {
+    "isp": "ISP-20",
+    "org": "Org-20"
+  },
+  "security": {
+    "is_proxy": false,
+    "proxy_type": null,
+    "threat_level": "low"
+  }
+}

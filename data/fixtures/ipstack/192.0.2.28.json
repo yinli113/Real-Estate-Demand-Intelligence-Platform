@@ -1,0 +1,25 @@
+{
+  "ip": "192.0.2.28",
+  "country_code": "AU",
+  "country_name": "Australia",
+  "region_name": "Region",
+  "city": "City",
+  "latitude": -2.0,
+  "longitude": 178.0,
+  "time_zone": {
+    "id": "UTC",
+    "code": "UTC"
+  },
+  "currency": {
+    "code": "USD"
+  },
+  "connection": {
+    "isp": "ISP-28",
+    "org": "Org-28"
+  },
+  "security": {
+    "is_proxy": false,
+    "proxy_type": null,
+    "threat_level": "low"
+  }
+}
