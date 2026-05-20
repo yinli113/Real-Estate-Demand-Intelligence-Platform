@@ -2,24 +2,22 @@
   "ip": "192.0.2.20",
   "country_code": "AU",
   "country_name": "Australia",
-  "region_name": "Region",
-  "city": "City",
-  "latitude": -10.0,
-  "longitude": 170.0,
+  "region_name": "Queensland",
+  "city": "Brisbane",
+  "latitude": -27.47,
+  "longitude": 153.03,
   "time_zone": {
-    "id": "UTC",
-    "code": "UTC"
+    "id": "Australia/Brisbane"
   },
   "currency": {
-    "code": "USD"
+    "code": "AUD"
   },
   "connection": {
-    "isp": "ISP-20",
-    "org": "Org-20"
+    "isp": "Telstra",
+    "org": "Telstra"
   },
   "security": {
     "is_proxy": false,
-    "proxy_type": null,
     "threat_level": "low"
   }
 }

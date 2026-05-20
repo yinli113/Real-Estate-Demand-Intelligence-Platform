@@ -1,3 +1,3 @@
 # Databricks mirror
 
-Notebooks are copied from `../notebooks/` for Hybrid (C). Keep in sync when editing loaders.
+Notebooks copied from `../notebooks/` for Hybrid (C). Same PySpark logic as Fabric.

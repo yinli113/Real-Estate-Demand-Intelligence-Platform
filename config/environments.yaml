@@ -1,23 +1,29 @@
 dev:
-  lakehouse: lh_geo_risk_dev
-  workspace_item: geo-risk-dev
-  schema: geo
+  lakehouse: lh_realestate_dev
+  workspace_item: realestate-dev
+  schema: dbo
+  market: AU
   mock_ipstack: true
-  lookback_days: 30
-  source_file: events_100.csv
+  lookback_days: 90
+  listings_file: listings.csv
+  views_file: property_views_500.csv
 
 test:
-  lakehouse: lh_geo_risk_test
-  workspace_item: geo-risk-test
-  schema: geo
+  lakehouse: lh_realestate_test
+  workspace_item: realestate-test
+  schema: dbo
+  market: AU
   mock_ipstack: true
-  lookback_days: 30
-  source_file: events_5k.csv
+  lookback_days: 90
+  listings_file: listings.csv
+  views_file: property_views_5k.csv
 
 prod:
-  lakehouse: lh_geo_risk_prod
-  workspace_item: geo-risk-prod
-  schema: geo
+  lakehouse: lh_realestate_prod
+  workspace_item: realestate-prod
+  schema: dbo
+  market: AU
   mock_ipstack: false
-  lookback_days: 30
-  source_file: events_raw.csv
+  lookback_days: 90
+  listings_file: listings.csv
+  views_file: property_views.csv

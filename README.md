@@ -1,73 +1,94 @@
-# Geo Risk Intelligence Pipeline
+# Real Estate Demand Intelligence Platform (Australia)
 
 # TL;DR
 
-Fabric-first **Bronze → Silver → Gold** pipeline that enriches web/login events with [IPstack](https://ipstack.com/) geo data, builds fraud and customer-360 Gold tables, and feeds Power BI. Phase 1 uses **batch historical data (last 30 days)**, **dev/test/prod** environments, and **mock IPstack** for local runs.
+Microsoft Fabric **Bronze → Silver → Gold** pipeline for **Australian real estate agencies**. Combines **property portal events** (views, enquiries) with **IPstack visitor geo enrichment** to answer: *what to promote, in which suburbs, at what price range, and when* — not just page-view dashboards.
+
+## Core business goal
+
+Help an agency decide:
+
+- Which **suburbs** attract interstate / overseas interest  
+- Which **property types** and **price ranges** convert best  
+- Where **high views but low enquiries** signal a promotion problem  
+- Which regions are **trending** month-over-month  
 
 ## Architecture
 
 ```
-CSV (Lakehouse Files) → bronze_events → IPstack → silver_* → gold_* → Power BI
+listings.csv + property_views.csv (Lakehouse Files)
+    → Bronze: listings + views + IPstack raw JSON
+    → Silver: silver_visits_enriched (property ⨝ visitor geo)
+    → Gold: 8 decision-support tables
+    → Power BI agency briefing
 ```
 
 | Layer | Tables |
 |-------|--------|
-| Bronze | `bronze_events`, `bronze_ipstack_raw`, `bronze_ipstack_errors` |
-| Silver | `silver_ip_dim`, `silver_events_enriched` |
-| Gold | `gold_geo_traffic_daily`, `gold_fraud_signals`, `gold_customer_features` |
+| Bronze | `bronze_listings`, `bronze_property_views`, `bronze_ipstack_raw` |
+| Silver | `silver_listings`, `silver_ip_dim`, `silver_visits_enriched` |
+| Gold | `gold_suburb_interest`, `gold_property_type_by_suburb`, `gold_price_engagement`, `gold_conversion_gaps`, `gold_property_trends`, `gold_region_type_preference`, `gold_repeat_interest`, `gold_interstate_flow` |
 
-Notebook layout matches [databricks_vic_traffic](https://github.com/yinli113/databricks_vic_traffic/tree/main/notebooks):
+## What IPstack does (and does not do)
 
-| # | Notebook |
-|---|----------|
-| 1 | `1_config.ipynb` — `Config`, env widgets |
-| 2 | `2_setup.ipynb` — create Delta tables |
-| 3 | `3_cleanup_old_tables.ipynb` — 30-day retention |
-| 4 | `4_bronze_loader.ipynb` — ingest CSV |
-| 5 | `5_silver_loader.ipynb` — IPstack + join |
-| 6 | `6_gold_loader.ipynb` — analytics tables |
+| IPstack provides | Your portal data provides |
+|------------------|---------------------------|
+| Visitor country, region, city (from IP) | Suburb, price, property type, bedrooms |
+| Timezone, ISP | View duration, enquiry, favorite flags |
+| VPN/proxy flags | Listing catalog, session behavior |
 
-## Environments
+IPstack does **not** supply property listings or company CRM data.
 
-Defined in [`config/environments.yaml`](config/environments.yaml):
+## Notebooks (Fabric / PySpark)
 
-| ENV | Lakehouse | Mock IPstack | Sample file |
-|-----|-----------|--------------|-------------|
-| dev | `lh_geo_risk_dev` | true | `events_100.csv` |
-| test | `lh_geo_risk_test` | true | `events_5k.csv` |
-| prod | `lh_geo_risk_prod` | false | `events_raw.csv` |
+| # | Notebook | Purpose |
+|---|----------|---------|
+| 1 | `1_config.ipynb` | dev/test/prod, lakehouse, mock IPstack |
+| 2 | `2_setup.ipynb` | Create Delta tables |
+| 3 | `3_cleanup_old_tables.ipynb` | 90-day retention |
+| 4 | `4_bronze_loader.ipynb` | Ingest listings + property views |
+| 5 | `5_silver_loader.ipynb` | IPstack on visitor IP + enrich joins |
+| 6 | `6_gold_loader.ipynb` | Build 8 Gold analytics tables |
+
+## Sample data (synthetic POC)
+
+| File | Rows | Seeded stories |
+|------|------|----------------|
+| `data/sample/listings.csv` | 160 | VIC/NSW/QLD suburbs, luxury flags |
+| `data/sample/property_views_500.csv` | 500 | Dev smoke test |
+| `data/sample/property_views_5k.csv` | 5,000 | Test + trends |
+| `data/fixtures/ipstack/` | 22 IPs | Sydney, Melbourne, Brisbane, SG, HK |
+
+**Seeded analytics stories:** Richmond (high views / low conversion), Box Hill interstate townhouse interest, overseas luxury views, repeat session intent.
+
+Regenerate: `python3 scripts/generate_sample_data.py`
 
 ## Quick start (Fabric)
 
-1. Create Lakehouse per env (e.g. `lh_geo_risk_dev`).
-2. Upload `data/sample/events_100.csv` → `Files/raw/sample/events_100.csv`.
+1. Create lakehouse `lh_realestate_dev` and attach to notebooks.
+2. Upload `data/sample/listings.csv` and `property_views_500.csv` → `Files/raw/sample/`.
 3. Upload `data/fixtures/ipstack/*.json` → `Files/fixtures/ipstack/`.
-4. Import notebooks from `notebooks/`.
-5. Create Variable Library — see [`fabric/variable_library.md`](fabric/variable_library.md).
-6. Run: `2_setup` → `4_bronze` → `5_silver` → `6_gold` (widgets: `ENV=dev`, `MOCK_IPSTACK=true`).
-7. Connect Power BI — see [`powerbi/README.md`](powerbi/README.md).
+4. Run `2_setup` → `4_bronze` → `5_silver` (`MOCK_IPSTACK=true`) → `6_gold`.
+5. Build Power BI from Gold tables — see [`powerbi/README.md`](powerbi/README.md).
 
-## Parameters (widgets / pipeline)
+## Parameters
 
-| Parameter | Default | Description |
-|-----------|---------|-------------|
-| `ENV` | dev | dev \| test \| prod |
-| `LAKEHOUSE` | from yaml | Override lakehouse name |
-| `MOCK_IPSTACK` | true | Use fixture JSON instead of API |
-| `LOOKBACK_DAYS` | 30 | Only ingest last N days |
-| `SOURCE_FILE` | events_100.csv | CSV under `Files/raw/sample/` |
+| Parameter | Default (dev) | Description |
+|-----------|---------------|-------------|
+| ENV | dev | dev \| test \| prod |
+| LOOKBACK_DAYS | 90 | View history window |
+| MOCK_IPSTACK | true | Use fixture JSON for visitor IPs |
+| VIEWS_FILE | property_views_500.csv | Views CSV filename |
 
-## Secrets
+## Environments
 
-- Set `IPSTACK_ACCESS_KEY` in Fabric Variable Library (prod) or `.env` locally.
-- Never commit API keys.
+See [`config/environments.yaml`](config/environments.yaml).
 
-## Phase 1 test checklist
+## Phase 2
 
-- [ ] `MOCK_IPSTACK=true` — all Gold tables populated
-- [ ] Live API on 5 IPs — `bronze_ipstack_raw` has JSON
-- [ ] `gold_fraud_signals.flag_suspicious` true for VPN session `sess-velocity-001`
-- [ ] Power BI shows country map and spend by region
+- Notebook/API ingest from real portal instead of CSV  
+- Hour-of-day engagement Gold table  
+- Optional Kafka for live property views  
 
 ## License
 

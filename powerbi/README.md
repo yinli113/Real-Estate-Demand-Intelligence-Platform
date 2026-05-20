@@ -1,34 +1,23 @@
-# Power BI — Geo Risk Intelligence
+# Power BI — Real Estate Demand Intelligence
+
+## Decision-support pages
+
+1. **Interstate demand** — `gold_suburb_interest` + `gold_interstate_flow` (Sydney → Melbourne suburbs)
+2. **Suburb conversion gaps** — `gold_conversion_gaps` (high views, low enquiries e.g. Richmond)
+3. **Price range engagement** — `gold_price_engagement` (500k–700k vs 2M+)
+4. **Property trends** — `gold_property_trends` (MoM growth with LAG)
+5. **Regional preferences** — `gold_region_type_preference` (apartment vs house by visitor state)
+6. **High-intent sessions** — `gold_repeat_interest` (repeat views ≥ 5)
+
+## Key measures
+
+```dax
+Interstate View Share = DIVIDE(SUM(gold_suburb_interest[interstate_views]), SUM(gold_suburb_interest[total_views]))
+Conversion Rate = DIVIDE(SUM(gold_conversion_gaps[enquiries]), SUM(gold_conversion_gaps[views]))
+MoM Growth = DIVIDE([This Month Views] - [Previous Month Views], [Previous Month Views])
+```
 
 ## Semantic model
 
-Import or DirectLake from Gold tables in the active lakehouse:
-
-| Table | Role | Key columns |
-|-------|------|-------------|
-| `gold_geo_traffic_daily` | Fact | date, country_code, event_count, revenue |
-| `gold_fraud_signals` | Fact | session_id, flag_suspicious, is_vpn |
-| `gold_customer_features` | Dimension | user_id, total_spend, primary_country |
-
-## Starter pages
-
-1. **Geo traffic** — map by `country_code`, bar chart events by date
-2. **Fraud** — VPN %, table of `flag_suspicious = true`
-3. **Customers** — top spenders by `total_spend`, timezone distribution
-
-## Measures (examples)
-
-```dax
-VPN Rate = DIVIDE(CALCULATE(COUNTROWS(gold_fraud_signals), gold_fraud_signals[is_vpn] = TRUE()), COUNTROWS(gold_fraud_signals))
-Total Revenue = SUM(gold_geo_traffic_daily[revenue])
-```
-
-## Per environment
-
-| ENV | Dataset name |
-|-----|----------------|
-| dev | Geo Risk DEV |
-| test | Geo Risk TEST |
-| prod | Geo Risk PROD |
-
-Point each dataset at the matching lakehouse (`lh_geo_risk_*`).
+Fact: `gold_suburb_interest`, `gold_conversion_gaps`, `gold_property_trends`
+Supporting: `gold_price_engagement`, `gold_repeat_interest`, `gold_interstate_flow`

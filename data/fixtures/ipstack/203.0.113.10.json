@@ -2,24 +2,22 @@
   "ip": "203.0.113.10",
   "country_code": "AU",
   "country_name": "Australia",
-  "region_name": "Victoria",
-  "city": "Melbourne",
-  "latitude": -37.81,
-  "longitude": 144.96,
+  "region_name": "New South Wales",
+  "city": "Sydney",
+  "latitude": -33.87,
+  "longitude": 151.21,
   "time_zone": {
-    "id": "Australia/Melbourne",
-    "code": "UTC"
+    "id": "Australia/Sydney"
   },
   "currency": {
     "code": "AUD"
   },
   "connection": {
     "isp": "Telstra",
-    "org": "Telstra Pty"
+    "org": "Telstra"
   },
   "security": {
     "is_proxy": false,
-    "proxy_type": null,
     "threat_level": "low"
   }
 }

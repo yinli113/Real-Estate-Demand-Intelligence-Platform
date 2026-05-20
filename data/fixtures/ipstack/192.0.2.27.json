@@ -1,25 +1,23 @@
 {
   "ip": "192.0.2.27",
-  "country_code": "GB",
-  "country_name": "United Kingdom",
-  "region_name": "Region",
-  "city": "City",
-  "latitude": -3.0,
-  "longitude": 177.0,
+  "country_code": "AU",
+  "country_name": "Australia",
+  "region_name": "New South Wales",
+  "city": "Sydney",
+  "latitude": -33.87,
+  "longitude": 151.21,
   "time_zone": {
-    "id": "UTC",
-    "code": "UTC"
+    "id": "Australia/Sydney"
   },
   "currency": {
-    "code": "USD"
+    "code": "AUD"
   },
   "connection": {
-    "isp": "ISP-27",
-    "org": "Org-27"
+    "isp": "Telstra",
+    "org": "Telstra"
   },
   "security": {
     "is_proxy": false,
-    "proxy_type": null,
     "threat_level": "low"
   }
 }

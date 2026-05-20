@@ -1,35 +1,17 @@
 ---
-name: geo-risk-pipeline
-description: Runs and extends the Geo Risk Intelligence Fabric medallion pipeline (IPstack enrichment, Bronze/Silver/Gold Delta, 30-day batch). Use when working on this repo, Fabric notebooks, IPstack, fraud Gold, customer 360, or Power BI.
+name: real-estate-demand-intelligence
+description: Runs the AU Real Estate Demand Intelligence Fabric pipeline (property views, IPstack visitor geo, Gold decision tables). Use for suburb interest, conversion gaps, interstate demand, or Power BI agency analytics.
 ---
 
-# Geo Risk Pipeline
+# Real Estate Demand Intelligence
 
-## E2E promotion
-
-1. dev — events_100.csv, MOCK_IPSTACK=true, run 2_setup → 4 → 5 → 6
-2. test — events_5k.csv, validate row counts and joins
-3. prod — real 30-day export, MOCK_IPSTACK=false, live API for new IPs only
-
-## Phase 1 checklist
-
-- [ ] All Gold tables populated (mock run)
-- [ ] 5 live IPstack calls succeed
-- [ ] flag_suspicious for sess-velocity-001
-- [ ] Power BI refresh OK
+## Flow
+2_setup → 4_bronze (listings + views) → 5_silver (IPstack + join) → 6_gold
 
 ## Parameters
+ENV, LAKEHOUSE, MOCK_IPSTACK, LOOKBACK_DAYS=90, VIEWS_FILE
 
-ENV, LAKEHOUSE, MOCK_IPSTACK, LOOKBACK_DAYS=30, SOURCE_FILE
+## Gold tables
+gold_suburb_interest, gold_conversion_gaps, gold_property_trends, gold_interstate_flow, gold_repeat_interest
 
-## Notebooks
-
-1_config, 2_setup, 3_cleanup, 4_bronze_loader, 5_silver_loader, 6_gold_loader
-
-## Troubleshooting
-
-- 429: enable mock or slow down API loop
-- Null country: check fixture JSON path or bronze_ipstack_raw
-- Wrong table: verify ENV matches lakehouse in environments.yaml
-
-See [reference.md](reference.md) for table list and Fabric setup.
+See reference.md for schemas and Fabric setup.

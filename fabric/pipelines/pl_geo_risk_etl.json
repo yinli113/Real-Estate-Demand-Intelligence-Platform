@@ -1,12 +1,12 @@
 {
-  "name": "pl_geo_risk_etl",
-  "description": "Geo Risk batch ETL — metadata-driven parameters",
+  "name": "pl_realestate_demand_etl",
+  "description": "AU Real Estate Demand Intelligence — batch ETL",
   "parameters": {
     "ENV": { "type": "string", "defaultValue": "dev" },
-    "LAKEHOUSE": { "type": "string", "defaultValue": "lh_geo_risk_dev" },
+    "LAKEHOUSE": { "type": "string", "defaultValue": "lh_realestate_dev" },
     "MOCK_IPSTACK": { "type": "string", "defaultValue": "true" },
-    "LOOKBACK_DAYS": { "type": "string", "defaultValue": "30" },
-    "SOURCE_FILE": { "type": "string", "defaultValue": "events_100.csv" },
+    "LOOKBACK_DAYS": { "type": "string", "defaultValue": "90" },
+    "VIEWS_FILE": { "type": "string", "defaultValue": "property_views_500.csv" },
     "RUN_SETUP": { "type": "bool", "defaultValue": false }
   },
   "activities": [
@@ -15,6 +15,5 @@
     { "name": "Bronze", "type": "TridentNotebook", "notebook": "4_bronze_loader", "dependsOn": ["Cleanup"] },
     { "name": "Silver", "type": "TridentNotebook", "notebook": "5_silver_loader", "dependsOn": ["Bronze"] },
     { "name": "Gold", "type": "TridentNotebook", "notebook": "6_gold_loader", "dependsOn": ["Silver"] }
-  ],
-  "notes": "Import this template in Fabric Data Pipeline UI. Map parameters to notebook base definitions."
+  ]
 }

@@ -1,25 +1,23 @@
 {
   "ip": "192.0.2.25",
-  "country_code": "US",
-  "country_name": "United States",
-  "region_name": "Region",
-  "city": "City",
-  "latitude": -5.0,
-  "longitude": 175.0,
+  "country_code": "AU",
+  "country_name": "Australia",
+  "region_name": "Victoria",
+  "city": "Melbourne",
+  "latitude": -37.81,
+  "longitude": 144.96,
   "time_zone": {
-    "id": "UTC",
-    "code": "UTC"
+    "id": "Australia/Melbourne"
   },
   "currency": {
-    "code": "USD"
+    "code": "AUD"
   },
   "connection": {
-    "isp": "ISP-25",
-    "org": "Org-25"
+    "isp": "Optus",
+    "org": "Optus"
   },
   "security": {
     "is_proxy": false,
-    "proxy_type": null,
     "threat_level": "low"
   }
 }

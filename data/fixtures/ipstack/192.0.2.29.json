@@ -1,25 +1,23 @@
 {
   "ip": "192.0.2.29",
-  "country_code": "US",
-  "country_name": "United States",
-  "region_name": "Region",
-  "city": "City",
-  "latitude": -1.0,
-  "longitude": 179.0,
+  "country_code": "AU",
+  "country_name": "Australia",
+  "region_name": "Queensland",
+  "city": "Brisbane",
+  "latitude": -27.47,
+  "longitude": 153.03,
   "time_zone": {
-    "id": "UTC",
-    "code": "UTC"
+    "id": "Australia/Brisbane"
   },
   "currency": {
-    "code": "USD"
+    "code": "AUD"
   },
   "connection": {
-    "isp": "ISP-29",
-    "org": "Org-29"
+    "isp": "Telstra",
+    "org": "Telstra"
   },
   "security": {
     "is_proxy": false,
-    "proxy_type": null,
     "threat_level": "low"
   }
 }

@@ -1,0 +1,23 @@
+{
+  "ip": "165.21.186.2",
+  "country_code": "HK",
+  "country_name": "Hong Kong",
+  "region_name": "Hong Kong",
+  "city": "Hong Kong",
+  "latitude": 22.32,
+  "longitude": 114.17,
+  "time_zone": {
+    "id": "Asia/Hong_Kong"
+  },
+  "currency": {
+    "code": "HKD"
+  },
+  "connection": {
+    "isp": "HKBN",
+    "org": "HKBN"
+  },
+  "security": {
+    "is_proxy": false,
+    "threat_level": "low"
+  }
+}

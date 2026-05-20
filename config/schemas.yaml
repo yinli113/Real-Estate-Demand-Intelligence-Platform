@@ -1,6 +1,19 @@
-# Geo Risk Intelligence Pipeline — column contracts
+# Real Estate Demand Intelligence — column contracts
 
-raw_event:
+listings:
+  - property_id
+  - property_type
+  - bedrooms
+  - bathrooms
+  - suburb
+  - postcode
+  - state
+  - price
+  - price_range
+  - is_luxury
+  - land_size_sqm
+
+property_views:
   - event_id
   - session_id
   - event_ts
@@ -8,73 +21,30 @@ raw_event:
   - user_id
   - ip
   - user_agent
-  - amount
+  - property_id
+  - view_duration_sec
+  - enquiry_flag
+  - favorite_flag
 
-bronze_events:
-  extends: raw_event
-  extra: [event_date, _ingested_at]
-
-bronze_ipstack_raw:
-  - ip
-  - response_json
-  - http_status
-  - api_called_at
-
-silver_ip_dim:
-  - ip
-  - country_code
-  - country_name
-  - region
-  - city
-  - latitude
-  - longitude
-  - timezone_id
-  - currency_code
-  - isp
-  - org
-  - is_proxy
-  - is_vpn
-  - threat_level
-  - enriched_at
-
-silver_events_enriched:
+silver_visits_enriched:
   - event_id
   - session_id
-  - event_ts
-  - event_type
-  - user_id
-  - ip
-  - user_agent
-  - amount
-  - event_date
-  - country_code
-  - country_name
-  - timezone_id
-  - isp
-  - is_vpn
-  - device
-  - spend
+  - suburb
+  - listing_state
+  - property_type
+  - price_range
+  - visitor_state
+  - visitor_country
+  - visitor_city
+  - view_duration_sec
+  - enquiry_flag
 
-gold_geo_traffic_daily:
-  - date
-  - country_code
-  - event_count
-  - unique_sessions
-  - revenue
-
-gold_fraud_signals:
-  - session_id
-  - ip
-  - country_code
-  - is_vpn
-  - vpn_risk_score
-  - event_count_1h
-  - flag_suspicious
-
-gold_customer_features:
-  - user_id
-  - primary_country
-  - timezone
-  - total_spend
-  - session_count
-  - last_seen_at
+gold_tables:
+  - gold_suburb_interest
+  - gold_property_type_by_suburb
+  - gold_price_engagement
+  - gold_conversion_gaps
+  - gold_property_trends
+  - gold_region_type_preference
+  - gold_repeat_interest
+  - gold_interstate_flow

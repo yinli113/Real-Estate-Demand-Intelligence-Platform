@@ -1,25 +1,23 @@
 {
   "ip": "192.0.2.22",
-  "country_code": "SG",
-  "country_name": "Singapore",
-  "region_name": "Region",
-  "city": "City",
-  "latitude": -8.0,
-  "longitude": 172.0,
+  "country_code": "AU",
+  "country_name": "Australia",
+  "region_name": "Victoria",
+  "city": "Melbourne",
+  "latitude": -37.81,
+  "longitude": 144.96,
   "time_zone": {
-    "id": "UTC",
-    "code": "UTC"
+    "id": "Australia/Melbourne"
   },
   "currency": {
-    "code": "USD"
+    "code": "AUD"
   },
   "connection": {
-    "isp": "ISP-22",
-    "org": "Org-22"
+    "isp": "Optus",
+    "org": "Optus"
   },
   "security": {
     "is_proxy": false,
-    "proxy_type": null,
     "threat_level": "low"
   }
 }

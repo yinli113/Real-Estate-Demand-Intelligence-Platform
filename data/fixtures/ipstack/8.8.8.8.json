@@ -7,19 +7,17 @@
   "latitude": 37.39,
   "longitude": -122.08,
   "time_zone": {
-    "id": "America/Los_Angeles",
-    "code": "UTC"
+    "id": "America/Los_Angeles"
   },
   "currency": {
     "code": "USD"
   },
   "connection": {
     "isp": "Google",
-    "org": "Google LLC"
+    "org": "Google"
   },
   "security": {
     "is_proxy": false,
-    "proxy_type": null,
     "threat_level": "low"
   }
 }
