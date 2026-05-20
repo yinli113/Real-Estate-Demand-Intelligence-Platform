@@ -1,19 +1,22 @@
-# Reference
+# Real Estate Demand Intelligence — Reference
 
-## Tables
+## Gold tables → business questions
 
-- bronze_events, bronze_ipstack_raw, bronze_ipstack_errors
-- silver_ip_dim, silver_events_enriched
-- gold_geo_traffic_daily, gold_fraud_signals, gold_customer_features
+| Table | Question |
+|-------|----------|
+| gold_suburb_interest | Which suburbs get interstate/overseas views? |
+| gold_property_type_by_suburb | Top property type per suburb? |
+| gold_price_engagement | Which price ranges convert best? |
+| gold_conversion_gaps | High views, low enquiries (e.g. Richmond)? |
+| gold_property_trends | MoM suburb growth (LAG)? |
+| gold_region_type_preference | NSW vs VIC: apartment vs house? |
+| gold_repeat_interest | Sessions with 5+ views (purchase intent)? |
+| gold_interstate_flow | visitor_state → listing_state flows |
 
-## Fabric setup
+## Sample files
+- listings.csv (160 properties)
+- property_views_500.csv (dev)
+- property_views_5k.csv (test)
 
-1. Lakehouse per env from config/environments.yaml
-2. Upload data/sample and data/fixtures to Files/
-3. Variable Library: ENV, LAKEHOUSE, MOCK_IPSTACK, LOOKBACK_DAYS, SOURCE_FILE
-4. Pipeline pl_geo_risk_etl — see fabric/pipelines/pl_geo_risk_etl.json
-
-## Phase 2 triggers
-
-- Streaming: Event Hub + Structured Streaming
-- Hybrid C: Fabric Bronze + Databricks Silver/Gold
+## Fabric lakehouses
+lh_realestate_dev | lh_realestate_test | lh_realestate_prod
