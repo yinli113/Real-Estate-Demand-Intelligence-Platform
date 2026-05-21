@@ -81,6 +81,8 @@ Regenerate: `python3 scripts/generate_sample_data.py`
 | VIEWS_FILE | property_views_5k.csv | Views CSV filename |
 | MAX_IPSTACK_CALLS | 5 | Live API safety cap |
 | FORCE_REFRESH_IPSTACK | false | Re-call IPstack even when cache exists |
+| KEY_VAULT_NAME | blank | Azure Key Vault name or URI for live IPstack |
+| IPSTACK_SECRET_NAME | ipstack-access-key | Secret name containing the IPstack key |
 
 
 
@@ -100,10 +102,12 @@ For a live API smoke test in `feature/live-ipstack-controls`:
 MOCK_IPSTACK = False
 MAX_IPSTACK_CALLS = 5
 FORCE_REFRESH_IPSTACK = False
-IPSTACK_ACCESS_KEY = ""  # set in Fabric workspace only; never commit a real key
+KEY_VAULT_NAME = "kv-realestate-demo"
+IPSTACK_SECRET_NAME = "ipstack-access-key"
+IPSTACK_ACCESS_KEY = ""  # local fallback only; never commit a real key
 ```
 
-Live mode skips IPs already present in `silver_ip_dim` unless `FORCE_REFRESH_IPSTACK=True`. The safety cap prevents burning API quota during testing.
+Live mode skips IPs already present in `silver_ip_dim` unless `FORCE_REFRESH_IPSTACK=True`. The safety cap prevents burning API quota during testing. See [`fabric/key_vault_live_ipstack.md`](fabric/key_vault_live_ipstack.md) for Azure Key Vault + pipeline setup.
 
 ## Environments
 

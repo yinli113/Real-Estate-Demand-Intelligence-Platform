@@ -33,6 +33,14 @@
     "FORCE_REFRESH_IPSTACK": {
       "type": "string",
       "defaultValue": "false"
+    },
+    "KEY_VAULT_NAME": {
+      "type": "string",
+      "defaultValue": ""
+    },
+    "IPSTACK_SECRET_NAME": {
+      "type": "string",
+      "defaultValue": "ipstack-access-key"
     }
   },
   "activities": [

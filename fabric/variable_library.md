@@ -12,3 +12,5 @@
 | MAX_IPSTACK_CALLS | 5 | Live IPstack safety cap |
 | FORCE_REFRESH_IPSTACK | false | Re-enrich cached IPs when true |
 | IPSTACK_ACCESS_KEY | secret reference | Store only in Fabric/Key Vault, never Git |
+| KEY_VAULT_NAME | kv-realestate-demo | Key Vault short name or URI |
+| IPSTACK_SECRET_NAME | ipstack-access-key | Secret containing the IPstack API key |
