@@ -55,8 +55,8 @@ IPstack does **not** supply property listings or company CRM data.
 | File | Rows | Seeded stories |
 |------|------|----------------|
 | `data/sample/listings.csv` | 160 | VIC/NSW/QLD suburbs, luxury flags |
-| `data/sample/property_views_500.csv` | 500 | Dev smoke test |
-| `data/sample/property_views_5k.csv` | 5,000 | Test + trends |
+| `data/sample/property_views_500.csv` | 500 | Optional quick smoke test |
+| `data/sample/property_views_5k.csv` | 5,000 | Default Fabric demo + trends |
 | `data/fixtures/ipstack/` | 22 IPs | Sydney, Melbourne, Brisbane, SG, HK |
 
 **Seeded analytics stories:** Richmond (high views / low conversion), Box Hill interstate townhouse interest, overseas luxury views, repeat session intent.
@@ -66,9 +66,9 @@ Regenerate: `python3 scripts/generate_sample_data.py`
 ## Quick start (Fabric)
 
 1. Create lakehouse `lh_realestate_dev` and attach to notebooks.
-2. Upload `data/sample/listings.csv` and `property_views_500.csv` → `Files/raw/sample/`.
+2. Upload `data/sample/listings.csv` and `property_views_5k.csv` → `Files/raw/sample/`.
 3. Upload `data/fixtures/ipstack/*.json` → `Files/fixtures/ipstack/`.
-4. Run `2_setup` → `4_bronze` → `5_silver` (`MOCK_IPSTACK=true`) → `6_gold`.
+4. Open each notebook and run cells top-to-bottom: `2_setup` → `4_bronze` → `5_silver` (`MOCK_IPSTACK=True`) → `6_gold`.
 5. Build Power BI from Gold tables — see [`powerbi/README.md`](powerbi/README.md).
 
 ## Parameters
@@ -78,7 +78,7 @@ Regenerate: `python3 scripts/generate_sample_data.py`
 | ENV | dev | dev \| test \| prod |
 | LOOKBACK_DAYS | 90 | View history window |
 | MOCK_IPSTACK | true | Use fixture JSON for visitor IPs |
-| VIEWS_FILE | property_views_500.csv | Views CSV filename |
+| VIEWS_FILE | property_views_5k.csv | Views CSV filename |
 
 ## Environments
 

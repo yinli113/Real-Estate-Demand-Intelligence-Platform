@@ -6,7 +6,7 @@ dev:
   mock_ipstack: true
   lookback_days: 90
   listings_file: listings.csv
-  views_file: property_views_500.csv
+  views_file: property_views_5k.csv
 
 test:
   lakehouse: lh_realestate_test

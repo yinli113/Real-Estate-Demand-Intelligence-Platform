@@ -15,7 +15,8 @@
 
 ## Sample files
 - listings.csv (160 properties)
-- property_views_500.csv (dev)
+- property_views_500.csv (optional quick smoke test)
+- property_views_5k.csv (default Fabric demo)
 - property_views_5k.csv (test)
 
 ## Fabric lakehouses

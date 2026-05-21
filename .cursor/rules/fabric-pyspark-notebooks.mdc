@@ -1,12 +1,13 @@
 ---
-description: PySpark notebook conventions for Fabric and Databricks
-globs: notebooks/**/*,databricks/**/*
+description: Fabric PySpark notebook conventions for this repo
+globs: notebooks/**/*
 alwaysApply: false
 ---
 
-# Notebooks
+# Fabric Notebooks
 
-- Order: 1_config → 2_setup → 3_cleanup → 4_bronze → 5_silver → 6_gold.
-- Always %run ./1_config first; use conf.table_fqn("table_name").
-- Parameters: ENV, LAKEHOUSE, MOCK_IPSTACK, LOOKBACK_DAYS, SOURCE_FILE.
+- Fabric-first only: no `%run`, no `dbutils`, no Databricks workspace paths.
+- Each notebook starts with a plain Fabric parameter/config cell.
+- Use attached Lakehouse paths: `Files/raw/sample/...` and table names like `dbo.table_name`.
+- Run notebooks top-to-bottom: `2_setup` → `3_cleanup` → `4_bronze` → `5_silver` → `6_gold`.
 - Do not hardcode API keys or lakehouse GUIDs.

@@ -6,7 +6,7 @@
     "LAKEHOUSE": { "type": "string", "defaultValue": "lh_realestate_dev" },
     "MOCK_IPSTACK": { "type": "string", "defaultValue": "true" },
     "LOOKBACK_DAYS": { "type": "string", "defaultValue": "90" },
-    "VIEWS_FILE": { "type": "string", "defaultValue": "property_views_500.csv" },
+    "VIEWS_FILE": { "type": "string", "defaultValue": "property_views_5k.csv" },
     "RUN_SETUP": { "type": "bool", "defaultValue": false }
   },
   "activities": [

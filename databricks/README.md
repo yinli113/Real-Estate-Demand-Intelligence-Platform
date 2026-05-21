@@ -1,3 +1,3 @@
-# Databricks mirror
+# Compatibility mirror
 
-Notebooks copied from `../notebooks/` for Hybrid (C). Same PySpark logic as Fabric.
+These notebooks mirror `../notebooks/`. The project is Fabric-first; this folder is only for future Hybrid C portability.
