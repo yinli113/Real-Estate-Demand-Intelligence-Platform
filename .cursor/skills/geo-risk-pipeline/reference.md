@@ -21,3 +21,11 @@
 
 ## Fabric lakehouses
 lh_realestate_dev | lh_realestate_test | lh_realestate_prod
+
+
+## Live IPstack controls
+
+- `MOCK_IPSTACK=True`: read fixture JSON, safest for demos.
+- `MOCK_IPSTACK=False`: call live API.
+- `MAX_IPSTACK_CALLS=5`: cap live calls while testing.
+- `FORCE_REFRESH_IPSTACK=False`: skip IPs already in `silver_ip_dim`.

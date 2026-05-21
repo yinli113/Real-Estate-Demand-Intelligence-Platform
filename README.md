@@ -79,6 +79,31 @@ Regenerate: `python3 scripts/generate_sample_data.py`
 | LOOKBACK_DAYS | 90 | View history window |
 | MOCK_IPSTACK | true | Use fixture JSON for visitor IPs |
 | VIEWS_FILE | property_views_5k.csv | Views CSV filename |
+| MAX_IPSTACK_CALLS | 5 | Live API safety cap |
+| FORCE_REFRESH_IPSTACK | false | Re-call IPstack even when cache exists |
+
+
+
+## IPstack Modes
+
+Development should normally use mock mode:
+
+```python
+MOCK_IPSTACK = True
+```
+
+This reads fixture JSON from `Files/fixtures/ipstack/` and keeps runs deterministic.
+
+For a live API smoke test in `feature/live-ipstack-controls`:
+
+```python
+MOCK_IPSTACK = False
+MAX_IPSTACK_CALLS = 5
+FORCE_REFRESH_IPSTACK = False
+IPSTACK_ACCESS_KEY = ""  # set in Fabric workspace only; never commit a real key
+```
+
+Live mode skips IPs already present in `silver_ip_dim` unless `FORCE_REFRESH_IPSTACK=True`. The safety cap prevents burning API quota during testing.
 
 ## Environments
 

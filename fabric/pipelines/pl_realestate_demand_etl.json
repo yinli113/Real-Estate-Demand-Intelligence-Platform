@@ -1,19 +1,75 @@
 {
   "name": "pl_realestate_demand_etl",
-  "description": "AU Real Estate Demand Intelligence — batch ETL",
+  "description": "AU Real Estate Demand Intelligence \u2014 batch ETL",
   "parameters": {
-    "ENV": { "type": "string", "defaultValue": "dev" },
-    "LAKEHOUSE": { "type": "string", "defaultValue": "lh_realestate_dev" },
-    "MOCK_IPSTACK": { "type": "string", "defaultValue": "true" },
-    "LOOKBACK_DAYS": { "type": "string", "defaultValue": "90" },
-    "VIEWS_FILE": { "type": "string", "defaultValue": "property_views_5k.csv" },
-    "RUN_SETUP": { "type": "bool", "defaultValue": false }
+    "ENV": {
+      "type": "string",
+      "defaultValue": "dev"
+    },
+    "LAKEHOUSE": {
+      "type": "string",
+      "defaultValue": "lh_realestate_dev"
+    },
+    "MOCK_IPSTACK": {
+      "type": "string",
+      "defaultValue": "true"
+    },
+    "LOOKBACK_DAYS": {
+      "type": "string",
+      "defaultValue": "90"
+    },
+    "VIEWS_FILE": {
+      "type": "string",
+      "defaultValue": "property_views_5k.csv"
+    },
+    "RUN_SETUP": {
+      "type": "bool",
+      "defaultValue": false
+    },
+    "MAX_IPSTACK_CALLS": {
+      "type": "string",
+      "defaultValue": "5"
+    },
+    "FORCE_REFRESH_IPSTACK": {
+      "type": "string",
+      "defaultValue": "false"
+    }
   },
   "activities": [
-    { "name": "Setup", "type": "TridentNotebook", "notebook": "2_setup", "condition": "@pipeline().parameters.RUN_SETUP" },
-    { "name": "Cleanup", "type": "TridentNotebook", "notebook": "3_cleanup_old_tables" },
-    { "name": "Bronze", "type": "TridentNotebook", "notebook": "4_bronze_loader", "dependsOn": ["Cleanup"] },
-    { "name": "Silver", "type": "TridentNotebook", "notebook": "5_silver_loader", "dependsOn": ["Bronze"] },
-    { "name": "Gold", "type": "TridentNotebook", "notebook": "6_gold_loader", "dependsOn": ["Silver"] }
+    {
+      "name": "Setup",
+      "type": "TridentNotebook",
+      "notebook": "2_setup",
+      "condition": "@pipeline().parameters.RUN_SETUP"
+    },
+    {
+      "name": "Cleanup",
+      "type": "TridentNotebook",
+      "notebook": "3_cleanup_old_tables"
+    },
+    {
+      "name": "Bronze",
+      "type": "TridentNotebook",
+      "notebook": "4_bronze_loader",
+      "dependsOn": [
+        "Cleanup"
+      ]
+    },
+    {
+      "name": "Silver",
+      "type": "TridentNotebook",
+      "notebook": "5_silver_loader",
+      "dependsOn": [
+        "Bronze"
+      ]
+    },
+    {
+      "name": "Gold",
+      "type": "TridentNotebook",
+      "notebook": "6_gold_loader",
+      "dependsOn": [
+        "Silver"
+      ]
+    }
   ]
 }
