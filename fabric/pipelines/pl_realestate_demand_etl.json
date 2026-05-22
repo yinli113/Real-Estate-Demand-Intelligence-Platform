@@ -36,7 +36,7 @@
     },
     "KEY_VAULT_NAME": {
       "type": "string",
-      "defaultValue": ""
+      "defaultValue": "kv-ipstack"
     },
     "IPSTACK_SECRET_NAME": {
       "type": "string",

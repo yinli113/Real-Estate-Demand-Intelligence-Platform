@@ -6,7 +6,7 @@ Use this for live IPstack testing in `ws_realestate_live_ipstack_dev`.
 
 In Azure Portal:
 
-1. Create a Key Vault, for example `kv-realestate-demo`.
+1. Create a Key Vault, for example `kv-ipstack`.
 2. Choose the same subscription/region as your Fabric trial resources if possible.
 3. Keep soft delete enabled.
 
@@ -23,10 +23,12 @@ Do not store the key in GitHub, notebooks, screenshots, or Fabric output cells.
 
 ## 3. Grant secret read access
 
-For trial/dev, grant your signed-in user permission to read secrets:
+For your Fabric trial/dev setup, `Key Vault Secrets Officer` is confirmed to work.
 
 - Key Vault → Access control (IAM) or Access policies
-- Role/permission: Key Vault Secrets User, or Secret Get/List access
+- Role used in this project: `Key Vault Secrets Officer`
+
+For production, reduce this to the least-privilege role that can read secrets (commonly `Key Vault Secrets User`) once the Fabric/identity path is stable.
 
 If your tenant uses Fabric workspace identity, grant that identity secret read access too.
 
@@ -39,7 +41,7 @@ In `pl_realestate_demand_etl`, add or set these parameters for the Silver notebo
 | `MOCK_IPSTACK` | `False` |
 | `MAX_IPSTACK_CALLS` | `5` |
 | `FORCE_REFRESH_IPSTACK` | `False` |
-| `KEY_VAULT_NAME` | `kv-realestate-demo` |
+| `KEY_VAULT_NAME` | `kv-ipstack` |
 | `IPSTACK_SECRET_NAME` | `ipstack-access-key` |
 
 Pass these as notebook base parameters where Fabric supports notebook activity parameters.
@@ -59,5 +61,5 @@ Keep `MAX_IPSTACK_CALLS` small until the API call path is proven.
 ## Troubleshooting
 
 - If the notebook says a key is required, check `KEY_VAULT_NAME`, `IPSTACK_SECRET_NAME`, and Key Vault permissions.
-- If Key Vault lookup fails, try passing the full vault URI as `KEY_VAULT_NAME`: `https://kv-realestate-demo.vault.azure.net/`.
+- If Key Vault lookup fails, try passing the full vault URI as `KEY_VAULT_NAME`: `https://kv-ipstack.vault.azure.net/`.
 - If IPstack returns empty data for synthetic IPs, test with a few real public IPs. Some sample IP ranges are documentation/test ranges.

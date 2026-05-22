@@ -102,7 +102,7 @@ For a live API smoke test in `feature/live-ipstack-controls`:
 MOCK_IPSTACK = False
 MAX_IPSTACK_CALLS = 5
 FORCE_REFRESH_IPSTACK = False
-KEY_VAULT_NAME = "kv-realestate-demo"
+KEY_VAULT_NAME = "kv-ipstack"
 IPSTACK_SECRET_NAME = "ipstack-access-key"
 IPSTACK_ACCESS_KEY = ""  # local fallback only; never commit a real key
 ```
