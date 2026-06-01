@@ -39,6 +39,11 @@ listings.csv + property_views.csv (Lakehouse Files)
 
 IPstack does **not** supply property listings or company CRM data.
 
+### Geo coordinate fields
+
+- `dim_visitor_geo` includes `visitor_latitude` and `visitor_longitude` from IPstack for visitor-origin maps.
+- `dim_suburb` includes approximate `suburb_latitude` and `suburb_longitude` for listing-suburb maps.
+
 ## Notebooks (Fabric / PySpark)
 
 | # | Notebook | Purpose |
