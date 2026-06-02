@@ -19,7 +19,7 @@ Help an agency decide:
 listings.csv + property_views.csv (Lakehouse Files)
     → Bronze: listings + views + IPstack raw JSON
     → Silver: silver_visits_enriched (property ⨝ visitor geo)
-    → Gold: 8 decision-support tables
+    → Gold: star schema (fact + dimensions) + decision-support marts
     → Power BI agency briefing
 ```
 
@@ -27,7 +27,51 @@ listings.csv + property_views.csv (Lakehouse Files)
 |-------|--------|
 | Bronze | `bronze_listings`, `bronze_property_views`, `bronze_ipstack_raw` |
 | Silver | `silver_listings`, `silver_ip_dim`, `silver_visits_enriched` |
-| Gold | `gold_suburb_interest`, `gold_property_type_by_suburb`, `gold_price_engagement`, `gold_conversion_gaps`, `gold_property_trends`, `gold_region_type_preference`, `gold_repeat_interest`, `gold_interstate_flow` |
+| Gold (star schema) | `fact_property_view`, `dim_date`, `dim_time`, `dim_property`, `dim_suburb`, `dim_visitor_geo`, `dim_price_band`, `dim_device` |
+| Gold (marts) | `gold_suburb_interest`, `gold_conversion_gaps`, `gold_property_trends`, `gold_price_engagement`, and more |
+
+---
+
+## End-to-end (Fabric prod)
+
+### 1. Workspace lineage — Lakehouse → notebooks → pipeline → semantic model → report
+
+Fabric lineage for prod workspace `ws_realestate_pro`: Lakehouse `lh_realestate_pro` feeds PySpark notebooks, orchestrated by `pl_realestate_demand_etl`, into semantic model `sm` and Power BI report `dashboard`.
+
+![Fabric workspace lineage — Lakehouse, notebooks, pipeline, semantic model, and Power BI report](docs/images/architecture-lineage.png)
+
+### 2. Scheduled ETL — Setup → Bronze → Silver → Gold
+
+Prod pipeline run (all activities succeeded): table setup, CSV ingest, IPstack enrichment, and Gold star schema build.
+
+![Prod pipeline — Setup, Bronze, Silver, Gold all succeeded](docs/images/prod-pipeline.png)
+
+Deploy steps: [`fabric/cicd.md`](fabric/cicd.md)
+
+### 3. Semantic model — star schema for Power BI
+
+`fact_property_view` at the centre; dimensions for date, time, property, suburb, visitor geo, price band, and device. Supports drill-through filters and map visuals via `visitor_latitude` / `suburb_latitude`.
+
+![Power BI star schema — fact_property_view and dim_* tables](docs/images/semantic-model.png)
+
+### 4. Power BI — storytelling dashboard (4 pages)
+
+Report design: [`powerbi/README.md`](powerbi/README.md)
+
+**Page 1 — Overview (the hook)**  
+Most visited/engaged suburb and property, interstate view share, buyer-origin vs listing-hotspot maps, enquiry and view trends.
+
+![Power BI Overview — KPIs, maps, and time-series trends](docs/images/powerbi-overview.png)
+
+**Page 2 — Suburb detail (drill-through)**  
+Example: Richmond — high views, low conversion (0.02). Breakdown by property type, visitor state, and price band.
+
+![Power BI Suburb Detail — Richmond conversion gap analysis](docs/images/powerbi-suburb-detail.png)
+
+**Page 3 — Time & timing (drill-through)**  
+When to schedule promotions: day-of-week × time-of-day heatmap, views by property type over time, MoM growth.
+
+![Power BI Time & Timing — engagement patterns by day and hour](docs/images/powerbi-time-timing.png)
 
 ## What IPstack does (and does not do)
 
