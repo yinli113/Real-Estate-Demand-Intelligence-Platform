@@ -116,7 +116,7 @@ Live mode skips IPs already present in `silver_ip_dim` unless `FORCE_REFRESH_IPS
 
 ## Environments
 
-See [`config/environments.yaml`](config/environments.yaml).
+See [`config/environments.yaml`](config/environments.yaml). For branch strategy, prod deploy, and Fabric ↔ Azure DevOps workflow, see [`fabric/cicd.md`](fabric/cicd.md).
 
 ## Phase 2
 
